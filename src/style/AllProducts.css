@@ -1,0 +1,143 @@
+.container {
+    padding: 1em;
+}
+.all-products-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  
+  @media (min-width: 768px) {
+    .all-products-container {
+      flex-direction: row;
+    }
+  }
+  
+  /* Product Image */
+  .product-image-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .product-image-section {
+      width: 50%;
+    }
+  }
+  
+  .product-image {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .image-hover-label {
+    position: absolute;
+    bottom: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Product Info */
+  .product-info {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .product-info {
+      width: 50%;
+    }
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .get-price-btn {
+    background-color: #ffe5b4;
+    color: #d17c00;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .product-details {
+    margin-top: 15px;
+    color: #555;
+  }
+  
+  .product-details span {
+    color: #0056b3;
+  }
+  
+  /* Table */
+  .product-table {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 14px;
+    border-collapse: collapse;
+  }
+  
+  .product-table td {
+    padding: 8px 10px;
+  }
+  
+  .product-table .label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .product-table .value {
+    color: #222;
+  }
+  
+  /* Preferred Buyer */
+  .preferred-buyer {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #d17c00;
+  }
+  
+  .preferred-buyer p {
+    color: #333;
+  }
+  
+  /* Interest Button */
+  .interest-btn {
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .interest-btn:hover {
+    background-color: #cc5200;
+  }
+  
