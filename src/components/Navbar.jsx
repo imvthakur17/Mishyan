@@ -26,8 +26,14 @@ export default function Navbar() {
       navigate("/");
       setNavbarStateName('home')
       window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top when clicking "Home"
-    } else {
+    } else if (target === "products") {
       setNavbarStateName('products')
+      navigate(target);
+    } else if (target === "about") {
+      setNavbarStateName('about')
+      navigate(target);
+    } else if (target === "contact") {
+      setNavbarStateName('contact')
       navigate(target);
     }
   };
@@ -63,7 +69,7 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#services">Our Services</a>
             </li>
             <li>
@@ -71,10 +77,20 @@ export default function Navbar() {
             </li>
             <li>
               <a href="#testimonials">Testimonials</a>
-            </li>
+            </li> */}
             <li onClick={() => handleNavigation("products")}>
               <a className={navbarStateName === "products" ? "active" : 'passive'}>
                 Products
+              </a>
+            </li>
+            <li onClick={() => handleNavigation("about")}>
+              <a className={navbarStateName === "about" ? "active" : 'passive'}>
+                About Us
+              </a>
+            </li>
+            <li onClick={() => handleNavigation("contact")}>
+              <a className={navbarStateName === "contact" ? "active" : 'passive'}>
+                Contact Us
               </a>
             </li>
             <li>
@@ -94,7 +110,7 @@ export default function Navbar() {
               Home
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#services" onClick={() => setNavbarState(false)}>
               Our Services
             </a>
@@ -108,15 +124,20 @@ export default function Navbar() {
             <a href="#testimonials" onClick={() => setNavbarState(false)}>
               Testimonials
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#products" onClick={() => setNavbarState(false)}>
               Products
             </a>
           </li>
           <li>
+            <a href="#products" onClick={() => setNavbarState(false)}>
+              About Us
+            </a>
+          </li>
+          <li>
             <a href="#newsletter" onClick={() => setNavbarState(false)}>
-              Newsletter
+              Contact Us
             </a>
           </li>
         </ul>

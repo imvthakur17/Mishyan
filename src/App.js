@@ -11,6 +11,8 @@ import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
 import AllProducts from "./components/AllProducts";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -41,6 +43,7 @@ export default function App() {
       <ScrollToTop />
       <Navbar />
       <MainPage />
+      <Footer/>
     </Router>
 
   );
@@ -49,29 +52,45 @@ const MainPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [showAllProducts, setShowAllProducts] = useState(false);
+  const [showPage, setShowPage] = useState('/');
 
   useEffect(() => {
-    setShowAllProducts(location.pathname === "/products");
+    if (location.pathname === "/products") {
+      setShowAllProducts(location.pathname === "/products");
+      setShowPage('products')
+    } else if (location.pathname === "/about") {
+      setShowPage('about')
+    } else if (location.pathname === "/contact") {
+      setShowPage('contact')
+    } else {
+      setShowPage('/')
+    }
   }, [location.pathname]);
 
   return (
     <>
-      {showAllProducts ? (
-        <>
-          <AllProducts />
-          <Footer />
-        </>
-      ) : (
-        <>
-          <Hero id="home" />
-          <Services id="services" />
-          <Portfolio id="portfolio" />
-          <Testimonials id="testimonials" />
-          <Products id="products" />
-          <Newsletter id="newsletter" />
-          <Footer />
-        </>
-      )}
+      {showPage === 'products' ? (
+        <AllProducts />
+      )
+        :
+        showPage === 'about' ? (
+          <AboutUs />
+        )
+          :
+          showPage === 'contact' ? (
+            <ContactUs />
+          )
+            :
+            (
+              <>
+                <Hero id="home" />
+                {/* <Services id="services" />
+                <Portfolio id="portfolio" />
+                <Testimonials id="testimonials" /> */}
+                <Products id="products" />
+                <Newsletter id="newsletter" />
+              </>
+            )}
     </>
   );
 };
