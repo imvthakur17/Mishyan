@@ -1,98 +1,179 @@
 /* General Styles */
 .about-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.business-info-li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ 
+/* Main Content */
+.about-content {
+  width: 65%;
+  padding: 20px;
+}
+
+.about-content h1 {
+  color: #1c2d45;
+  font-weight: 100;
+}
+
+.about-content p {
+  color: grey;
+  font-size: 14px;
+}
+
+.about-content h2 {
+  color: #1c2d45;
+  font-weight: 100;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.about-content ul {
+ padding-left: 30px;
+}
+
+.our-product-range p {
+ margin-top: 10px;
+}
+
+.breadcrumb {
+  background: #dfdfdf;
+  padding: 15px;
+  border-radius: 5px;
+  /* border: 1px solid #ddd; */
+  margin-bottom: 20px;
+}
+
+.business-info-li{
+  width: '90%';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.business-info-li p{
+  width: '45%';
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.business-info-li:last-child {
+  border-bottom: none;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 30%;
+  padding: 20px;
+}
+
+/* Common Box Styles */
+.products,
+.contactus,
+.business-info {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.business-info {
+  margin-top: 20px;
+}
+
+.products h3,
+.contactus h3,
+.business-info h3 {
+  color: #e67e22;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Product List */
+.products ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.products ul li:last-child {
+  border-bottom: none;
+}
+
+/* Business Info Box */
+.business-info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Contact Box */
+.contactus p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* 🔹 Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .about-page {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Main Content */
-  .about-content {
-    width: 65%;
-    padding: 20px;
-  }
-  
-  /* Sidebar */
+
+  .about-content,
   .sidebar {
-    width: 30%;
-    padding: 20px;
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .about-content,
+  .sidebar {
+    width: 100%;
+  }
+
+  .about-content h1 {
+    font-size: 20px;
   }
   
-  /* Common Box Styles */
-  .products, .contactus, .business-info {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-  }
-  
-  .products h3, .contactus h3, .business-info h3 {
-    color: #e67e22;
+  .about-content h2 {
     font-size: 18px;
-    margin-bottom: 10px;
   }
-  
-  /* Product List */
-  .products ul {
-    list-style-type: none;
-    padding: 0;
+
+  .products,
+  .contactus,
+  .business-info {
+    padding: 10px;
   }
-  
-  .products ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 14px;
+
+  .products h3,
+  .contactus h3,
+  .business-info h3 {
+    font-size: 16px;
   }
-  
-  .products ul li:last-child {
-    border-bottom: none;
-  }
-  
-  /* Business Info Box */
+
+  .products ul li,
+  .contactus p,
   .business-info p {
-    font-size: 14px;
-    margin: 5px 0;
+    font-size: 13px;
   }
-  
-  /* Contact Box */
-  .contactus p {
-    font-size: 14px;
-    margin: 5px 0;
-  }
-  
-  /* 🔹 Responsive Styles */
-  @media screen and (max-width: 1024px) {
-    .about-page {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .about-content, .sidebar {
-      width: 90%;
-      padding: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .about-content, .sidebar {
-      width: 100%;
-    }
-  
-    .products, .contactus, .business-info {
-      padding: 10px;
-    }
-  
-    .products h3, .contactus h3, .business-info h3 {
-      font-size: 16px;
-    }
-  
-    .products ul li, .contactus p, .business-info p {
-      font-size: 13px;
-    }
-  }
-  
+}

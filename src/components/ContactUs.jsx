@@ -35,8 +35,8 @@ const ContactUs = () => {
         {/* Right: Contact Info */}
         <div className="contact-info">
           <h3>Get in Touch</h3>
-          <p><strong>📍 Address:</strong> 10th Floor, Gaur City-2, Greater Noida, India</p>
-          <p><strong>📧 Email:</strong> mishyansoftware@gmail.com</p>
+          <p><strong>📍 Address:</strong> Golden I Greater Noida West 201301, India.</p>
+          <p><strong>📧 Email:</strong> info@mishyan.com</p>
           <p><strong>📞 Phone:</strong> +91-7217895839</p>
           
           {/* Google Map Embed */}

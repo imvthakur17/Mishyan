@@ -36,13 +36,14 @@ export default function Navbar() {
       setNavbarStateName('contact')
       navigate(target);
     }
+    setNavbarState(false)
   };
 
   return (
     <>
       <Nav>
         <div className="brand">
-          <img src={foodYummy} alt="Icon" />
+          <img src={foodYummy} alt="Icon" onClick={() => handleNavigation("/")} />
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -104,39 +105,30 @@ export default function Navbar() {
           <li>
             <a
               href="#home"
-              className="active"
-              onClick={() => setNavbarState(false)}
+              className={navbarStateName === "home" ? "active" : 'passive'}
+              onClick={() => handleNavigation("/")}
             >
               Home
             </a>
           </li>
-          {/* <li>
-            <a href="#services" onClick={() => setNavbarState(false)}>
-              Our Services
-            </a>
-          </li>
           <li>
-            <a href="#portfolio" onClick={() => setNavbarState(false)}>
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              Testimonials
-            </a>
-          </li> */}
-          <li>
-            <a href="#products" onClick={() => setNavbarState(false)}>
+            <a
+              className={navbarStateName === "products" ? "active" : 'passive'}
+              href="#products" onClick={() => handleNavigation("products")}>
               Products
             </a>
           </li>
           <li>
-            <a href="#products" onClick={() => setNavbarState(false)}>
+            <a
+              className={navbarStateName === "about" ? "active" : 'passive'}
+              href="#products" onClick={() => handleNavigation("about")}>
               About Us
             </a>
           </li>
           <li>
-            <a href="#newsletter" onClick={() => setNavbarState(false)}>
+            <a
+              className={navbarStateName === "contact" ? "active" : 'passive'}
+              href="#newsletter" onClick={() => handleNavigation("contact")}>
               Contact Us
             </a>
           </li>
@@ -238,12 +230,20 @@ const ResponsiveNav = styled.div`
           color: #fc4958;
         }
       }
-      &:first-of-type {
-        a {
-          color: #fc4958;
-          font-weight: 900;
+      .active {
+       color: #fc4958;
+       font-weight: 900;
         }
+
+      .passive { 
+        color: #f9c74f;
       }
+      // &:first-of-type {
+      //   a {
+      //     color: #fc4958;
+      //     font-weight: 900;
+      //   }
+      // }
     }
   }
 `;

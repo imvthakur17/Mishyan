@@ -15,7 +15,7 @@ export default function Newsletter() {
         </p>
       </div>
       <div className="container">
-        <input type="text" placeholder="Search for food ..." />
+        <input type="text" placeholder="Search ..." />
         <button>Search</button>
       </div>
     </Section>
