@@ -47,12 +47,12 @@ export default function App() {
 }
 const MainPage = () => {
   const location = useLocation();
-  const [showAllProducts, setShowAllProducts] = useState(false);
+  // const [showAllProducts, setShowAllProducts] = useState(false);
   const [showPage, setShowPage] = useState('/');
 
   useEffect(() => {
     if (location.pathname === "/products") {
-      setShowAllProducts(location.pathname === "/products");
+      // setShowAllProducts(location.pathname === "/products");
       setShowPage('products')
     } else if (location.pathname === "/about") {
       setShowPage('about')

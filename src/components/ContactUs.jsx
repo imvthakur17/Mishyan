@@ -38,10 +38,11 @@ const ContactUs = () => {
           <p><strong>📍 Address:</strong> Golden I Greater Noida West 201301, India.</p>
           <p><strong>📧 Email:</strong> info@mishyan.com</p>
           <p><strong>📞 Phone:</strong> +91-7217895839</p>
-          
+
           {/* Google Map Embed */}
           <div className="map">
             <iframe
+              title="Mishyan Software"
               src="https://maps.google.com/maps?q=Greater+Noida+West&t=&z=13&ie=UTF8&iwloc=&output=embed"
               allowFullScreen
               loading="lazy"

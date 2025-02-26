@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import foodYummy from "../assets/1.png";
 import { GiHamburgerMenu } from "react-icons/gi";

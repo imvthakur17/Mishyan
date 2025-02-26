@@ -10,7 +10,7 @@ export default function Hero() {
       </div>
       <div className="content">
         <div className="sale">
-          <img src={heroDesign} alt="" />
+          <img src={heroDesign} alt="sale" />
           <h1>
             BIG SALE
             <span>50% OFF</span>
