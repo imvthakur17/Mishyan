@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import product1 from "../assets/product5.jpg";
-import product2 from "../assets/product10.jpg";
-import product3 from "../assets/product14.jpg";
-import product4 from "../assets/product6.jpg";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import { ProductsList } from "../source/productsList";
 export default function Products() {
