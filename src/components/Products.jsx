@@ -1,52 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import { ProductsList } from "../source/productsList";
+import { useNavigate } from "react-router-dom";
+
 export default function Products() {
-  // const data = [
-  //   {
-  //     image: product1,
-  //     name: "Chicken Burger",
-  //     price: "$22.4/pcs",
-  //   },
-  //   {
-  //     image: product2,
-  //     name: "Toasted Bread",
-  //     price: "$5.5/pcs",
-  //   },
-  //   {
-  //     image: product3,
-  //     name: "Egg Sandwich",
-  //     price: "$8/pcs",
-  //   },
+  const [navbarState, setNavbarState] = useState(false);
+  const [navbarStateName, setNavbarStateName] = useState('home');
+  const html = document.querySelector("html");
+  html.addEventListener("click", () => setNavbarState(false));
 
-  //   {
-  //     image: product4,
-  //     name: "Raspberry Cake",
-  //     price: "$12.5/pcs",
-  //   },
-  //   {
-  //     image: product1,
-  //     name: "Chicken Burger",
-  //     price: "$22.4/pcs",
-  //   },
-  //   {
-  //     image: product2,
-  //     name: "Toasted Bread",
-  //     price: "$5.5/pcs",
-  //   },
-  //   {
-  //     image: product3,
-  //     name: "Egg Sandwich",
-  //     price: "$8/pcs",
-  //   },
+  const navigate = useNavigate();
 
-  //   {
-  //     image: product4,
-  //     name: "Raspberry Cake",
-  //     price: "$12.5/pcs",
-  //   },
-  // ];
+  const handleNavigation = (target) => {
+    setNavbarStateName('products')
+    navigate(target);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setNavbarState(false)
+  };
+
   return (
     <Section id="products">
       <div className="title">
@@ -77,16 +49,17 @@ export default function Products() {
         justifyContent: 'center',
         display: 'flex',
       }}>
-        <button className="seeMoreBtn" style={{
-          color: 'black',
-          background: 'transparent',
-          border: 'none',
-          padding: '1rem 4rem',
-          fontSize: '1.4rem',
-          cursor: 'pointer',
-          textDecoration: 'underline',
-          transition: 'all 0.3s ease-in-out'  // Smooth transition effect
-        }}
+        <button
+          className="seeMoreBtn" style={{
+            color: 'black',
+            background: 'transparent',
+            border: 'none',
+            padding: '1rem 4rem',
+            fontSize: '1.4rem',
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            transition: 'all 0.3s ease-in-out'  // Smooth transition effect
+          }}
           onMouseEnter={(e) => {
             e.target.style.transform = 'scale(1.1)';
             e.target.style.letterSpacing = '2px';
@@ -95,6 +68,7 @@ export default function Products() {
             e.target.style.transform = 'scale(1)';
             e.target.style.letterSpacing = 'normal';
           }}
+          onClick={() => handleNavigation("products")}
         >SEE MORE</button>
       </div>
     </Section>

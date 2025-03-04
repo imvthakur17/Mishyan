@@ -29,12 +29,15 @@ export default function Navbar() {
     } else if (target === "products") {
       setNavbarStateName('products')
       navigate(target);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (target === "about") {
       setNavbarStateName('about')
       navigate(target);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (target === "contact") {
       setNavbarStateName('contact')
       navigate(target);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     setNavbarState(false)
   };
@@ -94,9 +97,9 @@ export default function Navbar() {
                 Contact Us
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#newsletter">Newsletter</a>
-            </li>
+            </li> */}
           </ul>
         </ul>
       </Nav>

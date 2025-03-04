@@ -34,9 +34,10 @@ export default function Footer() {
         <div className="contact container">
           <h3>Contact Us</h3>
           <p>+91 1231231231</p>
-          <p>mishyansoftware@gmail.com</p>
+          <p>info@mishyan.com</p>
           <p>@mishyansoftware</p>
-          <p>412 Street, Ground Floor, India</p>
+          <p>Golden I Greater Noida West 201301, India.
+          </p>
         </div>
       </footer>
       <div className="lower-footer">

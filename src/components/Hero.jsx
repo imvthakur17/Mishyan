@@ -9,13 +9,13 @@ export default function Hero() {
         <img src={hero} alt="Background Image" />
       </div>
       <div className="content">
-        <div className="sale">
+        {/* <div className="sale">
           <img src={heroDesign} alt="sale" />
           <h1>
             BIG SALE
             <span>50% OFF</span>
           </h1>
-        </div>
+        </div> */}
         <div className="info">
           <h2>RETAILER</h2>
           <em>

@@ -12,7 +12,7 @@ const AboutUs = () => {
           Welcome to <strong>Mishyan Software System Private Limited</strong>, your trusted
           partner in safety and security solutions. Established in 2018 by Mr.
           Ashish Nigam, our company has quickly grown to become a{" "}
-          <span className="highlight">leading manufacturer and wholesaler</span>{" "}
+          <span className="highlight">trusted solution provider</span>{" "}
           in the field of fire and safety systems. With our headquarters located in Greater Noida West, Uttar Pradesh, we are proud to serve customers across the region and beyond.
         </p>
 
@@ -54,7 +54,7 @@ const AboutUs = () => {
 
           <div className="business-info-li">
             <p><strong>Nature of Business:</strong></p>
-            <p style={{ width: '45%' }}>Manufacturers, Wholesaler</p>
+            <p style={{ width: '45%' }}>Solution Provider</p>
           </div>
           <div className="business-info-li">
             <p><strong>Number of Employees :</strong></p>

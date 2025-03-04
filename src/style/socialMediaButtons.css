@@ -1,0 +1,78 @@
+.social-media-buttons {
+    position: fixed;
+    top: 50%; /* Adjust as needed */
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .social-media-buttons a {
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  /* .social-media-buttons a:hover {
+    background-color: #00c1c1;
+  } */
+  .social-media-buttons .facebook:hover {
+    background-color: #1877f2;
+  }
+  .social-media-buttons .twitter:hover {
+    background-color: #00c1c1;
+  }
+  .social-media-buttons .instagram:hover {
+    background-color: #d62976 ;
+  }
+  
+  /* .social-media-buttons .facebook:hover .facebook1 {
+    transform: rotate(3600deg);
+  } */
+
+  .social-media-buttons a:hover {
+    transform: rotate(3600deg);
+  }
+
+  
+
+  .whatsapp-button  {
+    position: fixed;
+    top: 95%; /* Adjust as needed */
+    left: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .whatsapp-button  a {
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #29d637 ;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 40px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }

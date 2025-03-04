@@ -10,6 +10,7 @@ import scrollreveal from "scrollreveal";
 import AllProducts from "./components/AllProducts";
 import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
+import SocialMediaButtons from "./components/socialMediaButtons";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -38,9 +39,10 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar />
-      <MainPage />
+      <Navbar/>
+      <MainPage/>
       <Footer/>
+      <SocialMediaButtons/>
     </Router>
 
   );
@@ -81,7 +83,7 @@ const MainPage = () => {
               <>
                 <Hero id="home" />
                 <Products id="products" />
-                <Newsletter id="newsletter" />
+                {/* <Newsletter id="newsletter" /> */}
               </>
             )}
     </>
