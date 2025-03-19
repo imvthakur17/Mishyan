@@ -37,7 +37,7 @@ export default function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             aspernatur itaque, eius quia voluptas numquam!
           </em>
-          <button  onClick={() => handleNavigation("products")}>Explore our Products</button>
+          <button onClick={() => handleNavigation("products")}>Explore our Products</button>
         </div>
       </div>
     </Section>
@@ -109,6 +109,7 @@ const Section = styled.section`
         font-size: 1.4rem;
         background-color: #fc4958;
         border: none;
+        border-radius: 0.5rem;
         color: white;
         font-weight: 800;
         letter-spacing: 0.2rem;
@@ -129,10 +130,16 @@ const Section = styled.section`
       .info {
         top: 25%;
         h2 {
-          font-size: 2rem;
+          font-size: 1.5rem;
         }
         em {
           width: 90%;
+          font-size: 1rem;
+          line-height: 1rem;
+        }
+        button{
+         padding: .5rem 1rem;
+          font-size: .8rem;
         }
       }
     }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import foodYummy from "../assets/1.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate } from "react-router-dom";
@@ -46,8 +45,7 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
-          {/* <img src={foodYummy} alt="Icon" onClick={() => handleNavigation("/")} /> */}
-          <div style={{
+          <div className="logo" style={{
             justifyContent: 'center',
             textAlign: 'center',
             paddingTop: 10,
@@ -210,6 +208,16 @@ const Nav = styled.nav`
       .toggle {
         display: block;
       }
+    }.
+    .logotext1 {
+
+    }
+    h2 {
+    font-size: .8rem;
+    }
+
+    h4 {
+    font-size: .5rem;
     }
     .links {
       display: none;
@@ -251,7 +259,7 @@ const ResponsiveNav = styled.div`
         }
 
       .passive { 
-        color: #f9c74f;
+        color: #000;
       }
       // &:first-of-type {
       //   a {
