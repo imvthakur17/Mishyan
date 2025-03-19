@@ -46,7 +46,19 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
-          <img src={foodYummy} alt="Icon" onClick={() => handleNavigation("/")} />
+          {/* <img src={foodYummy} alt="Icon" onClick={() => handleNavigation("/")} /> */}
+          <div style={{
+            justifyContent: 'center',
+            textAlign: 'center',
+            paddingTop: 10,
+            paddingBottom: 10,
+            fontFamily: '"Times New Roman", Times, serif',
+            cursor: "pointer",
+          }}
+          onClick={() => handleNavigation("/")} >
+            <h2>MISHYAN SOFTWARE</h2>
+            <h4>SYSTEM PRIVATE LIMITED</h4>
+          </div>
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -170,21 +182,21 @@ const Nav = styled.nav`
     li {
       a {
       cursor: pointer;
-        color: #fc4958;
+        color: #00000;
         font-weight: 600;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         transition: 0.3s ease-in-out;
         &:hover {
-          color: #f9c74f;
+          color: #fc4958;
         }
       }
       .active {
-        color: #f9c74f;
+        color: #fc4958;
       }
       .passive {
-        color: #fc4958;
+        color: #00000;
       }
     }
   }

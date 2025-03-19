@@ -1,8 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import hero from "../assets/hero2.jpg";
+import hero from "../assets/bg1.webp";
 import heroDesign from "../assets/HeroDesign.png";
+import { useNavigate } from "react-router-dom";
+
 export default function Hero() {
+  const [navbarState, setNavbarState] = useState(false);
+  const [navbarStateName, setNavbarStateName] = useState('home');
+  const html = document.querySelector("html");
+  html.addEventListener("click", () => setNavbarState(false));
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (target) => {
+    setNavbarStateName('products')
+    navigate(target);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setNavbarState(false)
+  };
   return (
     <Section id="home">
       <div className="background">
@@ -22,7 +37,7 @@ export default function Hero() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             aspernatur itaque, eius quia voluptas numquam!
           </em>
-          <button>ORDER NOW</button>
+          <button  onClick={() => handleNavigation("products")}>Explore our Products</button>
         </div>
       </div>
     </Section>
